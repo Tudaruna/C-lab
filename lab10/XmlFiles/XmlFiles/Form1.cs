@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace XmlFiles
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void taskOne_Click(object sender, EventArgs e)
+        {
+            var taskOneForm = new TaskOneForm();
+            taskOneForm.Show();
+        }
+
+        private void taskTwo_Click(object sender, EventArgs e)
+        {
+            var taskTwoForm = new TaskTwoForm();
+            taskTwoForm.Show();
+        }
+    }
+}

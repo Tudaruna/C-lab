@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gameResults>
+  <player id="1">
+    <name>Monster</name>
+    <score>250</score>
+  </player>
+  <player id="2">
+    <name>Mila</name>
+    <score>150</score>
+  </player>
+  <player id="3">
+    <name>Denis</name>
+    <score>175</score>
+  </player>
+  <player id="4">
+    <name>kamila</name>
+    <score>350</score>
+  </player>
+  <player id="5">
+    <name>Vitaliy</name>
+    <score>250</score>
+  </player>
+  <player id="6">
+    <name>Oleg</name>
+    <score>200</score>
+  </player>
+  <player id="7">
+    <name>Egor</name>
+    <score>210</score>
+  </player>
+  <player id="8">
+    <name>Vova</name>
+    <score>210</score>
+  </player>
+  <player id="9">
+    <name>Alex</name>
+    <score>120</score>
+    <time>21.03.2023 16:21:11</time>
+  </player>
+  <player id="10">
+    <name>Vera</name>
+    <score>190</score>
+    <time>21.03.2023 16:34:58</time>
+  </player>
+</gameResults>
