@@ -48,8 +48,12 @@ namespace MySQL
         // Открыть форму редактирования заказчика
         private void btnEditCustomer_Click(object sender, EventArgs e)
         {
-            if (dataGridView.SelectedRows.Count == 1)
+            try
             {
+                if (dataGridView.SelectedRows.Count != 1)
+                {
+                    throw new Exception("Выберите 1 строку для редактирования заказчика");
+                }
                 string[] data = new string[dataGridView.Columns.Count];
                 for (int  i = 0; i < dataGridView.Columns.Count; i++)
                 {
@@ -58,6 +62,10 @@ namespace MySQL
                 EditCustomer editCustomer = new EditCustomer(this, data);
                 editCustomer.Show();
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+;            }
         }
 
 

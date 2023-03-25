@@ -81,8 +81,9 @@
             // inputAddress
             // 
             this.inputAddress.Location = new System.Drawing.Point(322, 187);
+            this.inputAddress.Multiline = true;
             this.inputAddress.Name = "inputAddress";
-            this.inputAddress.Size = new System.Drawing.Size(181, 20);
+            this.inputAddress.Size = new System.Drawing.Size(181, 48);
             this.inputAddress.TabIndex = 29;
             // 
             // btnEditCustomer

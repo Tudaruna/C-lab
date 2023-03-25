@@ -47,7 +47,7 @@
             // Exit
             // 
             this.Exit.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Exit.Location = new System.Drawing.Point(709, 301);
+            this.Exit.Location = new System.Drawing.Point(709, 379);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(190, 28);
             this.Exit.TabIndex = 1;
@@ -79,11 +79,12 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(742, 380);
+            this.btnUpdate.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnUpdate.Location = new System.Drawing.Point(709, 311);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(190, 30);
             this.btnUpdate.TabIndex = 5;
-            this.btnUpdate.Text = "button1";
+            this.btnUpdate.Text = "Обновить данные";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
