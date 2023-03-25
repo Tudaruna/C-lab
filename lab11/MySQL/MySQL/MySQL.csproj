@@ -121,6 +121,9 @@
     <EmbeddedResource Include="Forms\AdminMenu\FormsAdminMenu\ActionCustomer\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminMenu\FormsAdminMenu\ActionCustomer\EditCustomer.resx">
+      <DependentUpon>EditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminMenu\FormsAdminMenu\ActionUser\AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,12 +1,5 @@
 ﻿using MySQL.Forms.AdminMenu.FormsAdminMenu;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DBConnection = MySQL.Classes.DBConnection;
 
@@ -26,18 +19,24 @@ namespace MySQL
             this.adminMenu = adminMenu;
         }
 
+        
+        // Подгрузка данных из БД при загрузке формы
         private void CustomerManagement_Load(object sender, EventArgs e)
         {
             DBConnection.GetCustomerList();
             dataGridView.DataSource = DBConnection.dtCustomers;
         }
 
+
+        // Переход на меню администратора
         private void Exit_Click(object sender, EventArgs e)
         {
             adminMenu.Show();
             Hide();
         }
 
+
+        // Открыть форму добавить нового пользователя
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
             AddCustomer addCustomer = new AddCustomer(this);
@@ -45,10 +44,29 @@ namespace MySQL
             Hide();
         }
 
+
+        // Открыть форму редактирования заказчика
         private void btnEditCustomer_Click(object sender, EventArgs e)
         {
-            EditCustomer editCustomer = new EditCustomer(this);
-            editCustomer.Show();
+            if (dataGridView.SelectedRows.Count == 1)
+            {
+                string[] data = new string[dataGridView.Columns.Count];
+                for (int  i = 0; i < dataGridView.Columns.Count; i++)
+                {
+                    data[i] = dataGridView.CurrentRow.Cells[i].Value.ToString();
+                }
+                EditCustomer editCustomer = new EditCustomer(this, data);
+                editCustomer.Show();
+            }
+        }
+
+
+        // Обновляем dataGridView
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            dataGridView.DataSource = new object(); // очищаем dataGridView от данных
+            DBConnection.GetCustomerList();
+            dataGridView.DataSource = DBConnection.dtCustomers;
         }
     }
 }

@@ -1,7 +1,5 @@
-﻿using MySQL.Forms.AdminMenu.FormsAdminMenu;
-using MySQL.Forms.AdminMenu.FormsAdminMenu.ActionUser;
+﻿using MySQL.Forms.AdminMenu.FormsAdminMenu.ActionUser;
 using System;
-using System.Runtime.InteropServices.ComTypes;
 using System.Windows.Forms;
 using DBConnection = MySQL.Classes.DBConnection;
 

@@ -1,13 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static MySQL.MainForm;
 using System.Windows.Forms;
-using System.Web;
 
 namespace MySQL.Classes
 {
@@ -125,6 +120,15 @@ namespace MySQL.Classes
         {
             msCommand.CommandText = $"INSERT INTO customers " +
                                     $"VALUES ('{user}', '{name}', '{phone}', '{email}', '{address}')";
+
+            msCommand.ExecuteNonQuery();
+        }
+
+        static public void EditCustomer(string user, string name, string phone, string address, string email = null)
+        {
+            msCommand.CommandText = $"UPDATE customers " +
+                                    $"SET Name = '{name}', Phone = '{phone}', Email = '{email}', Address = '{address}'" +
+                                    $"WHERE User = '{user}'";
 
             msCommand.ExecuteNonQuery();
         }
