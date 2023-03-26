@@ -31,6 +31,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnListUsers = new System.Windows.Forms.Button();
             this.btnMngCustomers = new System.Windows.Forms.Button();
+            this.btnMngWareHouse = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnExit
@@ -66,11 +67,23 @@
             this.btnMngCustomers.UseVisualStyleBackColor = true;
             this.btnMngCustomers.Click += new System.EventHandler(this.btnMngCustomers_Click);
             // 
+            // btnMngWareHouse
+            // 
+            this.btnMngWareHouse.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnMngWareHouse.Location = new System.Drawing.Point(34, 176);
+            this.btnMngWareHouse.Name = "btnMngWareHouse";
+            this.btnMngWareHouse.Size = new System.Drawing.Size(213, 29);
+            this.btnMngWareHouse.TabIndex = 4;
+            this.btnMngWareHouse.Text = "Управление складом";
+            this.btnMngWareHouse.UseVisualStyleBackColor = true;
+            this.btnMngWareHouse.Click += new System.EventHandler(this.btnMngWareHouse_Click);
+            // 
             // AdminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.btnMngWareHouse);
             this.Controls.Add(this.btnMngCustomers);
             this.Controls.Add(this.btnListUsers);
             this.Controls.Add(this.btnExit);
@@ -86,5 +99,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnListUsers;
         private System.Windows.Forms.Button btnMngCustomers;
+        private System.Windows.Forms.Button btnMngWareHouse;
     }
 }

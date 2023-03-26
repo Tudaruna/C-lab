@@ -30,7 +30,7 @@ namespace MySQL.Forms.AdminMenu.FormsAdminMenu.ActionUser
         private void Exit_Click(object sender, EventArgs e)
         {
             ListUsers.Show();
-            Hide();
+            Close();
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)

@@ -53,5 +53,20 @@ namespace MySQL
                 MessageBox.Show(ex.Message, "Ошибка авторизации");
             }
         }
+
+
+        // Показать пароль
+        private void picVisiblePass_MouseDown(object sender, MouseEventArgs e)
+        {
+            inputPass.PasswordChar = '\0';
+
+        }
+
+
+        // Скрыть пароль
+        private void picVisiblePass_MouseUp(object sender, MouseEventArgs e)
+        {
+            inputPass.PasswordChar = '*';
+        }
     }
 }

@@ -23,7 +23,7 @@ namespace MySQL
         private void btnExitListUsers_Click(object sender, EventArgs e)
         {
             adminMenu.Show();
-            Hide();
+            Close();
         }
 
         private void ListUsers_Load(object sender, EventArgs e)

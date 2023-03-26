@@ -23,7 +23,7 @@ namespace MySQL.Forms.AdminMenu.FormsAdminMenu
         private void Exit_Click(object sender, EventArgs e)
         {
             CustomerManagement.Show();
-            Hide();
+            Close();
         }
 
         private void btnAddCustomer_Click(object sender, EventArgs e)

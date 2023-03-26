@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySQL.Forms.AdminMenu.FormsAdminMenu;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,6 +52,13 @@ namespace MySQL
         {
             CustomerManagement customerManagement = new CustomerManagement(this);
             customerManagement.Show();
+            Hide();
+        }
+
+        private void btnMngWareHouse_Click(object sender, EventArgs e)
+        {
+            WarehouseManagement warehouseManagement = new WarehouseManagement(this);
+            warehouseManagement.Show();
             Hide();
         }
     }

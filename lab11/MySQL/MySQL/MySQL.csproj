@@ -65,35 +65,47 @@
   <ItemGroup>
     <Compile Include="Classes\DBConnection.cs" />
     <Compile Include="Classes\PasswordHasher.cs" />
-    <Compile Include="Forms\AdminMenu\FormsAdminMenu\ActionCustomer\AddCustomer.cs">
+    <Compile Include="Forms\AdminMenu\ActionCustomer\AddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminMenu\FormsAdminMenu\ActionCustomer\AddCustomer.Designer.cs">
+    <Compile Include="Forms\AdminMenu\ActionCustomer\AddCustomer.Designer.cs">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminMenu\FormsAdminMenu\ActionUser\AddUser.cs">
+    <Compile Include="Forms\AdminMenu\ActionSupplyes\AddSupply.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminMenu\FormsAdminMenu\ActionUser\AddUser.Designer.cs">
+    <Compile Include="Forms\AdminMenu\ActionSupplyes\AddSupply.Designer.cs">
+      <DependentUpon>AddSupply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminMenu\ActionUser\AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminMenu\ActionUser\AddUser.Designer.cs">
       <DependentUpon>AddUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminMenu\FormsAdminMenu\CustomerManagement.cs">
+    <Compile Include="Forms\AdminMenu\CustomerManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminMenu\FormsAdminMenu\CustomerManagement.Designer.cs">
+    <Compile Include="Forms\AdminMenu\CustomerManagement.Designer.cs">
       <DependentUpon>CustomerManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminMenu\FormsAdminMenu\ActionCustomer\EditCustomer.cs">
+    <Compile Include="Forms\AdminMenu\ActionCustomer\EditCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminMenu\FormsAdminMenu\ActionCustomer\EditCustomer.Designer.cs">
+    <Compile Include="Forms\AdminMenu\ActionCustomer\EditCustomer.Designer.cs">
       <DependentUpon>EditCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminMenu\FormsAdminMenu\ListUsers.cs">
+    <Compile Include="Forms\AdminMenu\ListUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminMenu\FormsAdminMenu\ListUsers.Designer.cs">
+    <Compile Include="Forms\AdminMenu\ListUsers.Designer.cs">
       <DependentUpon>ListUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminMenu\WarehouseManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminMenu\WarehouseManagement.Designer.cs">
+      <DependentUpon>WarehouseManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
@@ -115,25 +127,31 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AdminMenu\ActionSupplyes\AddSupply.resx">
+      <DependentUpon>AddSupply.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminMenu\AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminMenu\FormsAdminMenu\ActionCustomer\AddCustomer.resx">
+    <EmbeddedResource Include="Forms\AdminMenu\ActionCustomer\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminMenu\FormsAdminMenu\ActionCustomer\EditCustomer.resx">
+    <EmbeddedResource Include="Forms\AdminMenu\ActionCustomer\EditCustomer.resx">
       <DependentUpon>EditCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminMenu\FormsAdminMenu\ActionUser\AddUser.resx">
+    <EmbeddedResource Include="Forms\AdminMenu\ActionUser\AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminMenu\FormsAdminMenu\CustomerManagement.resx">
+    <EmbeddedResource Include="Forms\AdminMenu\CustomerManagement.resx">
       <DependentUpon>CustomerManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminMenu\WarehouseManagement.resx">
+      <DependentUpon>WarehouseManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomerMenu\CustomerMenu.resx">
       <DependentUpon>CustomerMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminMenu\FormsAdminMenu\ListUsers.resx">
+    <EmbeddedResource Include="Forms\AdminMenu\ListUsers.resx">
       <DependentUpon>ListUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
@@ -163,8 +181,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\Image1.jpg" />
+    <None Include="Resources\Image1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Choose>

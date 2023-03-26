@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.inputLogin = new System.Windows.Forms.TextBox();
             this.inputPass = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblAuth = new System.Windows.Forms.Label();
             this.btnAuth = new System.Windows.Forms.Button();
+            this.picVisiblePass = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picVisiblePass)).BeginInit();
             this.SuspendLayout();
             // 
             // inputLogin
@@ -94,11 +97,25 @@
             this.btnAuth.UseVisualStyleBackColor = true;
             this.btnAuth.Click += new System.EventHandler(this.btnAuth_Click);
             // 
+            // picVisiblePass
+            // 
+            this.picVisiblePass.BackColor = System.Drawing.Color.White;
+            this.picVisiblePass.Image = ((System.Drawing.Image)(resources.GetObject("picVisiblePass.Image")));
+            this.picVisiblePass.Location = new System.Drawing.Point(306, 208);
+            this.picVisiblePass.Name = "picVisiblePass";
+            this.picVisiblePass.Size = new System.Drawing.Size(21, 21);
+            this.picVisiblePass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picVisiblePass.TabIndex = 6;
+            this.picVisiblePass.TabStop = false;
+            this.picVisiblePass.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picVisiblePass_MouseDown);
+            this.picVisiblePass.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picVisiblePass_MouseUp);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(477, 384);
+            this.Controls.Add(this.picVisiblePass);
             this.Controls.Add(this.btnAuth);
             this.Controls.Add(this.lblAuth);
             this.Controls.Add(this.label2);
@@ -110,6 +127,7 @@
             this.Text = "Auth";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picVisiblePass)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,6 +141,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblAuth;
         private System.Windows.Forms.Button btnAuth;
+        private System.Windows.Forms.PictureBox picVisiblePass;
     }
 }
 

@@ -50,7 +50,7 @@ namespace MySQL.Forms.AdminMenu.FormsAdminMenu
         private void Exit_Click(object sender, EventArgs e)
         {
             customerManagement.Show();
-            Hide();
+            Close();
         }
     }
 }
