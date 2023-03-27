@@ -39,13 +39,14 @@
             this.inputValue = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnExecQuery = new System.Windows.Forms.Button();
+            this.lblAuth = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView.Location = new System.Drawing.Point(12, 92);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView.Size = new System.Drawing.Size(634, 515);
@@ -54,7 +55,7 @@
             // Exit
             // 
             this.Exit.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Exit.Location = new System.Drawing.Point(709, 494);
+            this.Exit.Location = new System.Drawing.Point(709, 574);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(190, 28);
             this.Exit.TabIndex = 1;
@@ -65,7 +66,7 @@
             // btnOpenFormAddCustomer
             // 
             this.btnOpenFormAddCustomer.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnOpenFormAddCustomer.Location = new System.Drawing.Point(709, 24);
+            this.btnOpenFormAddCustomer.Location = new System.Drawing.Point(709, 104);
             this.btnOpenFormAddCustomer.Name = "btnOpenFormAddCustomer";
             this.btnOpenFormAddCustomer.Size = new System.Drawing.Size(190, 48);
             this.btnOpenFormAddCustomer.TabIndex = 3;
@@ -76,7 +77,7 @@
             // btnOpenFormEditCustomer
             // 
             this.btnOpenFormEditCustomer.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnOpenFormEditCustomer.Location = new System.Drawing.Point(709, 103);
+            this.btnOpenFormEditCustomer.Location = new System.Drawing.Point(709, 183);
             this.btnOpenFormEditCustomer.Name = "btnOpenFormEditCustomer";
             this.btnOpenFormEditCustomer.Size = new System.Drawing.Size(190, 48);
             this.btnOpenFormEditCustomer.TabIndex = 4;
@@ -87,7 +88,7 @@
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnUpdate.Location = new System.Drawing.Point(709, 438);
+            this.btnUpdate.Location = new System.Drawing.Point(709, 518);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(190, 30);
             this.btnUpdate.TabIndex = 5;
@@ -98,7 +99,7 @@
             // btnDeleteCustomer
             // 
             this.btnDeleteCustomer.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDeleteCustomer.Location = new System.Drawing.Point(709, 184);
+            this.btnDeleteCustomer.Location = new System.Drawing.Point(709, 264);
             this.btnDeleteCustomer.Name = "btnDeleteCustomer";
             this.btnDeleteCustomer.Size = new System.Drawing.Size(190, 48);
             this.btnDeleteCustomer.TabIndex = 6;
@@ -117,7 +118,7 @@
             "Телефон",
             "Почта",
             "Адрес"});
-            this.comboBox.Location = new System.Drawing.Point(709, 278);
+            this.comboBox.Location = new System.Drawing.Point(709, 358);
             this.comboBox.Name = "comboBox";
             this.comboBox.Size = new System.Drawing.Size(190, 26);
             this.comboBox.TabIndex = 7;
@@ -126,7 +127,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(710, 258);
+            this.label1.Location = new System.Drawing.Point(710, 338);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(164, 15);
             this.label1.TabIndex = 8;
@@ -135,7 +136,7 @@
             // inputValue
             // 
             this.inputValue.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputValue.Location = new System.Drawing.Point(709, 341);
+            this.inputValue.Location = new System.Drawing.Point(709, 421);
             this.inputValue.Name = "inputValue";
             this.inputValue.Size = new System.Drawing.Size(190, 23);
             this.inputValue.TabIndex = 9;
@@ -144,7 +145,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(710, 322);
+            this.label2.Location = new System.Drawing.Point(710, 402);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(145, 15);
             this.label2.TabIndex = 10;
@@ -153,7 +154,7 @@
             // btnExecQuery
             // 
             this.btnExecQuery.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnExecQuery.Location = new System.Drawing.Point(709, 385);
+            this.btnExecQuery.Location = new System.Drawing.Point(709, 465);
             this.btnExecQuery.Name = "btnExecQuery";
             this.btnExecQuery.Size = new System.Drawing.Size(190, 30);
             this.btnExecQuery.TabIndex = 11;
@@ -161,11 +162,22 @@
             this.btnExecQuery.UseVisualStyleBackColor = true;
             this.btnExecQuery.Click += new System.EventHandler(this.btnExecQuery_Click);
             // 
+            // lblAuth
+            // 
+            this.lblAuth.AutoSize = true;
+            this.lblAuth.Font = new System.Drawing.Font("Montserrat ExtraBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAuth.Location = new System.Drawing.Point(307, 21);
+            this.lblAuth.Name = "lblAuth";
+            this.lblAuth.Size = new System.Drawing.Size(402, 37);
+            this.lblAuth.TabIndex = 12;
+            this.lblAuth.Text = "Управление заказчиками";
+            // 
             // CustomerManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(957, 572);
+            this.ClientSize = new System.Drawing.Size(957, 632);
+            this.Controls.Add(this.lblAuth);
             this.Controls.Add(this.btnExecQuery);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.inputValue);
@@ -200,5 +212,6 @@
         private System.Windows.Forms.TextBox inputValue;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnExecQuery;
+        private System.Windows.Forms.Label lblAuth;
     }
 }

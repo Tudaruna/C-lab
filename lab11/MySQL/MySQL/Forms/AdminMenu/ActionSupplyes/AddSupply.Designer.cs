@@ -36,12 +36,13 @@
             this.inputDate = new System.Windows.Forms.DateTimePicker();
             this.btnAddSupply = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.lblAuth = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // inputCountProduct
             // 
             this.inputCountProduct.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.inputCountProduct.Location = new System.Drawing.Point(141, 157);
+            this.inputCountProduct.Location = new System.Drawing.Point(141, 224);
             this.inputCountProduct.Name = "inputCountProduct";
             this.inputCountProduct.Size = new System.Drawing.Size(200, 23);
             this.inputCountProduct.TabIndex = 1;
@@ -51,7 +52,7 @@
             this.comBoxProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comBoxProduct.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comBoxProduct.FormattingEnabled = true;
-            this.comBoxProduct.Location = new System.Drawing.Point(141, 67);
+            this.comBoxProduct.Location = new System.Drawing.Point(141, 134);
             this.comBoxProduct.Name = "comBoxProduct";
             this.comBoxProduct.Size = new System.Drawing.Size(200, 26);
             this.comBoxProduct.TabIndex = 3;
@@ -60,7 +61,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(138, 37);
+            this.label1.Location = new System.Drawing.Point(138, 104);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(202, 15);
             this.label1.TabIndex = 4;
@@ -70,7 +71,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(138, 129);
+            this.label2.Location = new System.Drawing.Point(138, 196);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 15);
             this.label2.TabIndex = 5;
@@ -80,7 +81,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(138, 208);
+            this.label3.Location = new System.Drawing.Point(138, 275);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 15);
             this.label3.TabIndex = 6;
@@ -90,7 +91,7 @@
             // 
             this.inputDate.CalendarFont = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.inputDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.inputDate.Location = new System.Drawing.Point(141, 235);
+            this.inputDate.Location = new System.Drawing.Point(141, 302);
             this.inputDate.Name = "inputDate";
             this.inputDate.Size = new System.Drawing.Size(200, 20);
             this.inputDate.TabIndex = 7;
@@ -98,7 +99,7 @@
             // btnAddSupply
             // 
             this.btnAddSupply.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAddSupply.Location = new System.Drawing.Point(141, 298);
+            this.btnAddSupply.Location = new System.Drawing.Point(141, 365);
             this.btnAddSupply.Name = "btnAddSupply";
             this.btnAddSupply.Size = new System.Drawing.Size(200, 29);
             this.btnAddSupply.TabIndex = 8;
@@ -109,7 +110,7 @@
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnExit.Location = new System.Drawing.Point(141, 368);
+            this.btnExit.Location = new System.Drawing.Point(141, 435);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(200, 29);
             this.btnExit.TabIndex = 9;
@@ -117,11 +118,22 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // lblAuth
+            // 
+            this.lblAuth.AutoSize = true;
+            this.lblAuth.Font = new System.Drawing.Font("Montserrat ExtraBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAuth.Location = new System.Drawing.Point(79, 24);
+            this.lblAuth.Name = "lblAuth";
+            this.lblAuth.Size = new System.Drawing.Size(349, 37);
+            this.lblAuth.TabIndex = 10;
+            this.lblAuth.Text = "Добавление поставки";
+            // 
             // AddSupply
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(506, 434);
+            this.ClientSize = new System.Drawing.Size(506, 533);
+            this.Controls.Add(this.lblAuth);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnAddSupply);
             this.Controls.Add(this.inputDate);
@@ -148,5 +160,6 @@
         private System.Windows.Forms.DateTimePicker inputDate;
         private System.Windows.Forms.Button btnAddSupply;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label lblAuth;
     }
 }

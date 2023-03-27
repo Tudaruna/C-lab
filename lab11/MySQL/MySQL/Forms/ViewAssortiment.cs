@@ -22,6 +22,7 @@ namespace MySQL.Forms
             InitializeComponent();
             this.adminMenu = adminMenu;
             this.isAdmin = true;
+            FormBorderStyle = FormBorderStyle.None;
         }
 
         public ViewAssortiment(MySQL.CustomerMenu customerMenu)
@@ -29,6 +30,7 @@ namespace MySQL.Forms
             InitializeComponent();
             this.customerMenu = customerMenu;
             this.isAdmin = false;
+            FormBorderStyle = FormBorderStyle.None;
         }
 
         public ViewAssortiment()

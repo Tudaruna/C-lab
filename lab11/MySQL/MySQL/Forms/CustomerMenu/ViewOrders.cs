@@ -26,6 +26,7 @@ namespace MySQL.Forms.CustomerMenu
         {
             InitializeComponent();
             this.customerMenu = customerMenu;
+            FormBorderStyle = FormBorderStyle.None;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -38,6 +39,13 @@ namespace MySQL.Forms.CustomerMenu
         {
             DBConnection.GetOrders();
             dataGridOrders.DataSource = DBConnection.dtOrders;
+        }
+
+        private void btnOpenCheckOut_Click(object sender, EventArgs e)
+        {
+            CheckOut checkOut = new CheckOut(this);
+            checkOut.Show();
+            Hide();
         }
     }
 }

@@ -23,6 +23,7 @@ namespace MySQL
 
         public AdminMenu()
         {
+            this.mainForm = new MainForm();
             InitializeComponent();
         }
 
@@ -32,6 +33,7 @@ namespace MySQL
             this.mainForm = mainForm;
             this.role = role;
             this.login = login;
+            FormBorderStyle = FormBorderStyle.None;
         }
 
         private void btnExit_Click(object sender, EventArgs e)

@@ -18,6 +18,7 @@ namespace MySQL.Forms.AdminMenu.FormsAdminMenu.ActionUser
 
         public AddUser()
         {
+            
             InitializeComponent();
         }
 
@@ -25,6 +26,7 @@ namespace MySQL.Forms.AdminMenu.FormsAdminMenu.ActionUser
         {
             InitializeComponent();
             this.ListUsers = listUsers;
+            FormBorderStyle = FormBorderStyle.None;
         }
 
         private void Exit_Click(object sender, EventArgs e)
@@ -53,6 +55,15 @@ namespace MySQL.Forms.AdminMenu.FormsAdminMenu.ActionUser
                     MessageBox.Show("Пользователь создан", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     inputLogin.Text = "";
                     inputPassword.Text = "";
+                    if (role == "Customer")
+                    {
+                        if (MessageBox.Show("Перейти к заполнению информации заказчика?", "Уведомление", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        {
+                            AddCustomer addCustomer = new AddCustomer();
+                            addCustomer.Show();
+                            Close();
+                        }
+                    }
                 }
                 else
                 {

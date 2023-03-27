@@ -39,6 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnResetSort = new System.Windows.Forms.Button();
             this.btnWriteOff = new System.Windows.Forms.Button();
+            this.lblAuth = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCountProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDetailsProduct)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +55,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridCountProducts.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridCountProducts.Location = new System.Drawing.Point(30, 57);
+            this.dataGridCountProducts.Location = new System.Drawing.Point(30, 122);
             this.dataGridCountProducts.Name = "dataGridCountProducts";
             this.dataGridCountProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridCountProducts.Size = new System.Drawing.Size(498, 511);
@@ -64,7 +65,7 @@
             // dataGridDetailsProduct
             // 
             this.dataGridDetailsProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridDetailsProduct.Location = new System.Drawing.Point(571, 57);
+            this.dataGridDetailsProduct.Location = new System.Drawing.Point(571, 122);
             this.dataGridDetailsProduct.Name = "dataGridDetailsProduct";
             this.dataGridDetailsProduct.Size = new System.Drawing.Size(273, 511);
             this.dataGridDetailsProduct.TabIndex = 1;
@@ -73,7 +74,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(568, 23);
+            this.label1.Location = new System.Drawing.Point(568, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 18);
             this.label1.TabIndex = 2;
@@ -83,7 +84,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(27, 23);
+            this.label2.Location = new System.Drawing.Point(27, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(186, 18);
             this.label2.TabIndex = 3;
@@ -92,7 +93,7 @@
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnExit.Location = new System.Drawing.Point(921, 350);
+            this.btnExit.Location = new System.Drawing.Point(921, 415);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(191, 30);
             this.btnExit.TabIndex = 4;
@@ -103,7 +104,7 @@
             // btnAddSupply
             // 
             this.btnAddSupply.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAddSupply.Location = new System.Drawing.Point(921, 284);
+            this.btnAddSupply.Location = new System.Drawing.Point(921, 349);
             this.btnAddSupply.Name = "btnAddSupply";
             this.btnAddSupply.Size = new System.Drawing.Size(191, 33);
             this.btnAddSupply.TabIndex = 5;
@@ -116,7 +117,7 @@
             this.comboBoxSortProducts.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSortProducts.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxSortProducts.FormattingEnabled = true;
-            this.comboBoxSortProducts.Location = new System.Drawing.Point(921, 57);
+            this.comboBoxSortProducts.Location = new System.Drawing.Point(921, 122);
             this.comboBoxSortProducts.Name = "comboBoxSortProducts";
             this.comboBoxSortProducts.Size = new System.Drawing.Size(191, 26);
             this.comboBoxSortProducts.TabIndex = 6;
@@ -126,7 +127,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(897, 23);
+            this.label3.Location = new System.Drawing.Point(897, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(234, 18);
             this.label3.TabIndex = 7;
@@ -135,7 +136,7 @@
             // btnResetSort
             // 
             this.btnResetSort.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnResetSort.Location = new System.Drawing.Point(921, 116);
+            this.btnResetSort.Location = new System.Drawing.Point(921, 181);
             this.btnResetSort.Name = "btnResetSort";
             this.btnResetSort.Size = new System.Drawing.Size(191, 33);
             this.btnResetSort.TabIndex = 8;
@@ -146,7 +147,7 @@
             // btnWriteOff
             // 
             this.btnWriteOff.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnWriteOff.Location = new System.Drawing.Point(921, 206);
+            this.btnWriteOff.Location = new System.Drawing.Point(921, 271);
             this.btnWriteOff.Name = "btnWriteOff";
             this.btnWriteOff.Size = new System.Drawing.Size(191, 33);
             this.btnWriteOff.TabIndex = 9;
@@ -154,11 +155,22 @@
             this.btnWriteOff.UseVisualStyleBackColor = true;
             this.btnWriteOff.Click += new System.EventHandler(this.btnWriteOff_Click);
             // 
+            // lblAuth
+            // 
+            this.lblAuth.AutoSize = true;
+            this.lblAuth.Font = new System.Drawing.Font("Montserrat ExtraBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAuth.Location = new System.Drawing.Point(479, 27);
+            this.lblAuth.Name = "lblAuth";
+            this.lblAuth.Size = new System.Drawing.Size(288, 37);
+            this.lblAuth.TabIndex = 10;
+            this.lblAuth.Text = "Товары на складе";
+            // 
             // WarehouseManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1198, 612);
+            this.ClientSize = new System.Drawing.Size(1198, 671);
+            this.Controls.Add(this.lblAuth);
             this.Controls.Add(this.btnWriteOff);
             this.Controls.Add(this.btnResetSort);
             this.Controls.Add(this.label3);
@@ -191,5 +203,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnResetSort;
         private System.Windows.Forms.Button btnWriteOff;
+        private System.Windows.Forms.Label lblAuth;
     }
 }

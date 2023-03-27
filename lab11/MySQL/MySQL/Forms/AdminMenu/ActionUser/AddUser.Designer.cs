@@ -36,12 +36,13 @@
             this.btnAddUser = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.comboBoxRole = new System.Windows.Forms.ComboBox();
+            this.lblAuth = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // inputLogin
             // 
             this.inputLogin.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.inputLogin.Location = new System.Drawing.Point(157, 107);
+            this.inputLogin.Location = new System.Drawing.Point(227, 119);
             this.inputLogin.Name = "inputLogin";
             this.inputLogin.Size = new System.Drawing.Size(181, 23);
             this.inputLogin.TabIndex = 19;
@@ -50,7 +51,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(157, 242);
+            this.label3.Location = new System.Drawing.Point(227, 254);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 18);
             this.label3.TabIndex = 18;
@@ -60,7 +61,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(157, 163);
+            this.label2.Location = new System.Drawing.Point(227, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 18);
             this.label2.TabIndex = 17;
@@ -70,7 +71,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(157, 86);
+            this.label1.Location = new System.Drawing.Point(227, 98);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 18);
             this.label1.TabIndex = 16;
@@ -79,7 +80,7 @@
             // inputPassword
             // 
             this.inputPassword.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.inputPassword.Location = new System.Drawing.Point(158, 191);
+            this.inputPassword.Location = new System.Drawing.Point(228, 203);
             this.inputPassword.Name = "inputPassword";
             this.inputPassword.PasswordChar = '*';
             this.inputPassword.Size = new System.Drawing.Size(180, 23);
@@ -88,7 +89,7 @@
             // btnAddUser
             // 
             this.btnAddUser.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAddUser.Location = new System.Drawing.Point(157, 345);
+            this.btnAddUser.Location = new System.Drawing.Point(227, 357);
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.Size = new System.Drawing.Size(181, 27);
             this.btnAddUser.TabIndex = 23;
@@ -99,7 +100,7 @@
             // Exit
             // 
             this.Exit.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Exit.Location = new System.Drawing.Point(157, 393);
+            this.Exit.Location = new System.Drawing.Point(227, 405);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(181, 27);
             this.Exit.TabIndex = 22;
@@ -115,16 +116,27 @@
             this.comboBoxRole.Items.AddRange(new object[] {
             "Администратор",
             "Заказчик"});
-            this.comboBoxRole.Location = new System.Drawing.Point(157, 267);
+            this.comboBoxRole.Location = new System.Drawing.Point(227, 279);
             this.comboBoxRole.Name = "comboBoxRole";
             this.comboBoxRole.Size = new System.Drawing.Size(178, 26);
             this.comboBoxRole.TabIndex = 24;
+            // 
+            // lblAuth
+            // 
+            this.lblAuth.AutoSize = true;
+            this.lblAuth.Font = new System.Drawing.Font("Montserrat ExtraBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAuth.Location = new System.Drawing.Point(59, 22);
+            this.lblAuth.Name = "lblAuth";
+            this.lblAuth.Size = new System.Drawing.Size(527, 37);
+            this.lblAuth.TabIndex = 25;
+            this.lblAuth.Text = "Добавление нового пользователя";
             // 
             // AddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(527, 491);
+            this.ClientSize = new System.Drawing.Size(635, 491);
+            this.Controls.Add(this.lblAuth);
             this.Controls.Add(this.comboBoxRole);
             this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.Exit);
@@ -151,5 +163,6 @@
         private System.Windows.Forms.Button btnAddUser;
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.ComboBox comboBoxRole;
+        private System.Windows.Forms.Label lblAuth;
     }
 }

@@ -35,6 +35,7 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnOpenAddUser = new System.Windows.Forms.Button();
+            this.lblAuth = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -44,7 +45,7 @@
             this.dataGridView.AllowUserToAddRows = false;
             this.dataGridView.AllowUserToDeleteRows = false;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView.Location = new System.Drawing.Point(12, 78);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.Size = new System.Drawing.Size(502, 413);
             this.dataGridView.TabIndex = 0;
@@ -52,9 +53,9 @@
             // btnExitListUsers
             // 
             this.btnExitListUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnExitListUsers.Location = new System.Drawing.Point(568, 294);
+            this.btnExitListUsers.Location = new System.Drawing.Point(568, 360);
             this.btnExitListUsers.Name = "btnExitListUsers";
-            this.btnExitListUsers.Size = new System.Drawing.Size(161, 23);
+            this.btnExitListUsers.Size = new System.Drawing.Size(161, 29);
             this.btnExitListUsers.TabIndex = 1;
             this.btnExitListUsers.Text = "Выход";
             this.btnExitListUsers.UseVisualStyleBackColor = true;
@@ -104,7 +105,7 @@
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox1.Location = new System.Drawing.Point(544, 45);
+            this.groupBox1.Location = new System.Drawing.Point(544, 111);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(227, 132);
             this.groupBox1.TabIndex = 2;
@@ -114,7 +115,7 @@
             // btnOpenAddUser
             // 
             this.btnOpenAddUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnOpenAddUser.Location = new System.Drawing.Point(568, 211);
+            this.btnOpenAddUser.Location = new System.Drawing.Point(568, 277);
             this.btnOpenAddUser.Name = "btnOpenAddUser";
             this.btnOpenAddUser.Size = new System.Drawing.Size(161, 54);
             this.btnOpenAddUser.TabIndex = 3;
@@ -122,11 +123,22 @@
             this.btnOpenAddUser.UseVisualStyleBackColor = true;
             this.btnOpenAddUser.Click += new System.EventHandler(this.btnOpenAddUser_Click);
             // 
+            // lblAuth
+            // 
+            this.lblAuth.AutoSize = true;
+            this.lblAuth.Font = new System.Drawing.Font("Montserrat ExtraBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAuth.Location = new System.Drawing.Point(247, 18);
+            this.lblAuth.Name = "lblAuth";
+            this.lblAuth.Size = new System.Drawing.Size(361, 37);
+            this.lblAuth.TabIndex = 6;
+            this.lblAuth.Text = "Список пользователей";
+            // 
             // ListUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(813, 468);
+            this.ClientSize = new System.Drawing.Size(813, 530);
+            this.Controls.Add(this.lblAuth);
             this.Controls.Add(this.btnOpenAddUser);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnExitListUsers);
@@ -139,6 +151,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -151,5 +164,6 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnOpenAddUser;
+        private System.Windows.Forms.Label lblAuth;
     }
 }

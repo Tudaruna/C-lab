@@ -27,6 +27,7 @@ namespace MySQL
         {
             InitializeComponent();
             this.mainForm = mainForm;
+            FormBorderStyle = FormBorderStyle.None;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -51,7 +52,6 @@ namespace MySQL
 
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
-            DBConnection.CheckOut();
         }
     }
 }

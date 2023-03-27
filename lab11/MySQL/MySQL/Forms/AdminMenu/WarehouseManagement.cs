@@ -25,6 +25,7 @@ namespace MySQL.Forms.AdminMenu.FormsAdminMenu
         {
             InitializeComponent();
             this.adminMenu = adminMenu;
+            FormBorderStyle = FormBorderStyle.None;
         }
 
         private void WarehouseManagement_Load(object sender, EventArgs e)

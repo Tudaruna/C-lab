@@ -18,6 +18,7 @@ namespace MySQL
         {
             InitializeComponent();
             this.adminMenu = adminMenu;
+            FormBorderStyle = FormBorderStyle.None;
         }
 
         private void btnExitListUsers_Click(object sender, EventArgs e)

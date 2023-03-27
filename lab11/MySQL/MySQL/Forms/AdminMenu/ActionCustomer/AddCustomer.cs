@@ -11,6 +11,7 @@ namespace MySQL.Forms.AdminMenu.FormsAdminMenu
 
         public AddCustomer()
         {
+            this.CustomerManagement = new CustomerManagement();
             InitializeComponent();
         }
 
@@ -18,6 +19,8 @@ namespace MySQL.Forms.AdminMenu.FormsAdminMenu
         {
             InitializeComponent();
             this.CustomerManagement = customerManagement;
+            FormBorderStyle = FormBorderStyle.None;
+
         }
 
         private void Exit_Click(object sender, EventArgs e)

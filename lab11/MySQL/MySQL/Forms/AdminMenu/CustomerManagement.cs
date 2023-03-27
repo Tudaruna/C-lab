@@ -11,12 +11,14 @@ namespace MySQL
 
         public CustomerManagement()
         {
+            this.adminMenu = new AdminMenu();
             InitializeComponent();
         }
         public CustomerManagement(AdminMenu adminMenu)
         {
             InitializeComponent();
             this.adminMenu = adminMenu;
+            FormBorderStyle = FormBorderStyle.None;
         }
 
         private void UpdateDataGridView()

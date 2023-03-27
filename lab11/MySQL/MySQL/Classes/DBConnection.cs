@@ -26,6 +26,8 @@ namespace MySQL.Classes
         static public DataTable dtAssortiment = new DataTable();
         static public DataTable dtSalesForAdmin = new DataTable();
         static public DataTable dtOrders = new DataTable();
+        static public DataTable dtProductsFromStore = new DataTable();
+        static public DataTable dtPositionIDFromStore = new DataTable();
         static public MySqlDataReader msDataReader = null;
 
 
@@ -320,7 +322,7 @@ namespace MySQL.Classes
 
         
         // Оформить заказ
-        static public void CheckOut(string product, int count)
+        static public void CheckOut(int productID, int count)
         {
             msCommand.CommandText = $"INSERT INTO sales (Customer, Date) " +
                                     $"VALUES ('{User}', '{DateTime.Now.ToString("yyyy-MM-dd")}')";
@@ -331,10 +333,40 @@ namespace MySQL.Classes
             int indSale = Int32.Parse(res.ToString());
 
             msCommand.CommandText = $"INSERT INTO positionsinsale " +
-                                    $"VALUES ('{indSale}', '{product}', '{count}');";
+                                    $"VALUES ({indSale}, {productID}, {count});";
+            msCommand.ExecuteNonQuery();
+
+            msCommand.CommandText = $"UPDATE store " +
+                                    $"SET Count = Count - {count} " +
+                                    $"WHERE PositionID = {productID};";
             msCommand.ExecuteNonQuery();
         }
 
-        // Добавить функцию которая выбирает продукты для comboBox в форме ViewOrders из таблицы store в БД
+        // Добавить функцию которая выбирает продукты для comboBox в форме CheckOut из таблицы store в БД
+
+        static public void GetProductsFromStore()
+        {
+            msCommand.CommandText = $"SELECT DISTINCT assortiment.Name FROM store " +
+                                    $"INNER JOIN assortiment USING(Product);";
+            msDataAdapter.SelectCommand = msCommand;
+            dtProductsFromStore.Clear();
+            msDataAdapter.Fill(dtProductsFromStore);
+        }
+
+
+        //
+        static public string GetPositionIDFromStoreByProduct(string nameProduct)
+        {
+            msCommand.CommandText = $"SELECT PositionID " +
+                                    $"FROM store " +
+                                    $"WHERE Product = " +
+                                        $"(SELECT Product " +
+                                        $"FROM assortiment " +
+                                        $"WHERE Name = '{nameProduct}');";
+            object res = msCommand.ExecuteScalar();
+            return res.ToString();
+
+
+        }
     }
 }

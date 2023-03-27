@@ -20,6 +20,7 @@ namespace MySQL.Forms.AdminMenu.FormsAdminMenu
             InitializeComponent();
             this.customerManagement = customerManagement;
             this.data = data;
+            FormBorderStyle = FormBorderStyle.None;
         }
 
 

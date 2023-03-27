@@ -28,6 +28,7 @@ namespace MySQL.Forms.AdminMenu.ActionSupplyes
         {
             InitializeComponent();
             this.warehouseManagement = warehouseManagement;
+            FormBorderStyle = FormBorderStyle.None;
         }
 
         private void btnExit_Click(object sender, EventArgs e)

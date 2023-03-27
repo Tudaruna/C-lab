@@ -24,6 +24,7 @@ namespace MySQL.Forms.AdminMenu
         {
             InitializeComponent();
             this.adminMenu = adminMenu;
+            FormBorderStyle = FormBorderStyle.None;
         }
 
         
