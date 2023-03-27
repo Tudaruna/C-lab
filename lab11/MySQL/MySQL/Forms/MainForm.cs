@@ -38,7 +38,7 @@ namespace MySQL
                 {
                     case "Customer":
                         Hide();
-                        CustomerMenu customerMenu = new CustomerMenu();
+                        CustomerMenu customerMenu = new CustomerMenu(this);
                         customerMenu.Show();
                         break;
                     case "Admin":

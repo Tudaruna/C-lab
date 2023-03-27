@@ -32,6 +32,8 @@
             this.btnListUsers = new System.Windows.Forms.Button();
             this.btnMngCustomers = new System.Windows.Forms.Button();
             this.btnMngWareHouse = new System.Windows.Forms.Button();
+            this.btnViewAssortiment = new System.Windows.Forms.Button();
+            this.btnSales = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnExit
@@ -78,11 +80,35 @@
             this.btnMngWareHouse.UseVisualStyleBackColor = true;
             this.btnMngWareHouse.Click += new System.EventHandler(this.btnMngWareHouse_Click);
             // 
+            // btnViewAssortiment
+            // 
+            this.btnViewAssortiment.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnViewAssortiment.Location = new System.Drawing.Point(34, 236);
+            this.btnViewAssortiment.Name = "btnViewAssortiment";
+            this.btnViewAssortiment.Size = new System.Drawing.Size(213, 29);
+            this.btnViewAssortiment.TabIndex = 5;
+            this.btnViewAssortiment.Text = "Просмотр ассортимента";
+            this.btnViewAssortiment.UseVisualStyleBackColor = true;
+            this.btnViewAssortiment.Click += new System.EventHandler(this.btnViewAssortiment_Click);
+            // 
+            // btnSales
+            // 
+            this.btnSales.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSales.Location = new System.Drawing.Point(34, 290);
+            this.btnSales.Name = "btnSales";
+            this.btnSales.Size = new System.Drawing.Size(213, 29);
+            this.btnSales.TabIndex = 6;
+            this.btnSales.Text = "Просмотр продаж";
+            this.btnSales.UseVisualStyleBackColor = true;
+            this.btnSales.Click += new System.EventHandler(this.btnSales_Click);
+            // 
             // AdminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.btnSales);
+            this.Controls.Add(this.btnViewAssortiment);
             this.Controls.Add(this.btnMngWareHouse);
             this.Controls.Add(this.btnMngCustomers);
             this.Controls.Add(this.btnListUsers);
@@ -100,5 +126,7 @@
         private System.Windows.Forms.Button btnListUsers;
         private System.Windows.Forms.Button btnMngCustomers;
         private System.Windows.Forms.Button btnMngWareHouse;
+        private System.Windows.Forms.Button btnViewAssortiment;
+        private System.Windows.Forms.Button btnSales;
     }
 }

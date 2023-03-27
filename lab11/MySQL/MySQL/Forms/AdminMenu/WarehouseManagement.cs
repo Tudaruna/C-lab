@@ -68,5 +68,21 @@ namespace MySQL.Forms.AdminMenu.FormsAdminMenu
             DBConnection.GetCountProducts();
             dataGridCountProducts.DataSource = DBConnection.dtWhProductsCount;
         }
+
+        private void btnWriteOff_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int count = DBConnection.WriteOff();
+                if (count > 0)
+                    MessageBox.Show($"Списано {count.ToString()} товаров", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Нет просроченных товаров", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

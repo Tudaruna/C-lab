@@ -38,6 +38,7 @@
             this.comboBoxSortProducts = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnResetSort = new System.Windows.Forms.Button();
+            this.btnWriteOff = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCountProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDetailsProduct)).BeginInit();
             this.SuspendLayout();
@@ -91,7 +92,7 @@
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnExit.Location = new System.Drawing.Point(921, 259);
+            this.btnExit.Location = new System.Drawing.Point(921, 350);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(191, 30);
             this.btnExit.TabIndex = 4;
@@ -102,7 +103,7 @@
             // btnAddSupply
             // 
             this.btnAddSupply.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAddSupply.Location = new System.Drawing.Point(921, 193);
+            this.btnAddSupply.Location = new System.Drawing.Point(921, 284);
             this.btnAddSupply.Name = "btnAddSupply";
             this.btnAddSupply.Size = new System.Drawing.Size(191, 33);
             this.btnAddSupply.TabIndex = 5;
@@ -142,11 +143,23 @@
             this.btnResetSort.UseVisualStyleBackColor = true;
             this.btnResetSort.Click += new System.EventHandler(this.btnResetSort_Click);
             // 
+            // btnWriteOff
+            // 
+            this.btnWriteOff.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnWriteOff.Location = new System.Drawing.Point(921, 206);
+            this.btnWriteOff.Name = "btnWriteOff";
+            this.btnWriteOff.Size = new System.Drawing.Size(191, 33);
+            this.btnWriteOff.TabIndex = 9;
+            this.btnWriteOff.Text = "Списание просрочки";
+            this.btnWriteOff.UseVisualStyleBackColor = true;
+            this.btnWriteOff.Click += new System.EventHandler(this.btnWriteOff_Click);
+            // 
             // WarehouseManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1198, 612);
+            this.Controls.Add(this.btnWriteOff);
             this.Controls.Add(this.btnResetSort);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxSortProducts);
@@ -177,5 +190,6 @@
         private System.Windows.Forms.ComboBox comboBoxSortProducts;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnResetSort;
+        private System.Windows.Forms.Button btnWriteOff;
     }
 }

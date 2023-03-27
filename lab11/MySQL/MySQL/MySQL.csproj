@@ -101,11 +101,23 @@
     <Compile Include="Forms\AdminMenu\ListUsers.Designer.cs">
       <DependentUpon>ListUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AdminMenu\ViewSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminMenu\ViewSales.Designer.cs">
+      <DependentUpon>ViewSales.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AdminMenu\WarehouseManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\AdminMenu\WarehouseManagement.Designer.cs">
       <DependentUpon>WarehouseManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerMenu\ViewOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerMenu\ViewOrders.Designer.cs">
+      <DependentUpon>ViewOrders.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
@@ -124,6 +136,12 @@
     </Compile>
     <Compile Include="Forms\CustomerMenu\CustomerMenu.Designer.cs">
       <DependentUpon>CustomerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewAssortiment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewAssortiment.Designer.cs">
+      <DependentUpon>ViewAssortiment.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -145,6 +163,9 @@
     <EmbeddedResource Include="Forms\AdminMenu\CustomerManagement.resx">
       <DependentUpon>CustomerManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminMenu\ViewSales.resx">
+      <DependentUpon>ViewSales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminMenu\WarehouseManagement.resx">
       <DependentUpon>WarehouseManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,8 +175,14 @@
     <EmbeddedResource Include="Forms\AdminMenu\ListUsers.resx">
       <DependentUpon>ListUsers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerMenu\ViewOrders.resx">
+      <DependentUpon>ViewOrders.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewAssortiment.resx">
+      <DependentUpon>ViewAssortiment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

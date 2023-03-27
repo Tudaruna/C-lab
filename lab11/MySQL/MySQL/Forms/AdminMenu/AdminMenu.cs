@@ -1,4 +1,6 @@
-﻿using MySQL.Forms.AdminMenu.FormsAdminMenu;
+﻿using MySQL.Forms;
+using MySQL.Forms.AdminMenu;
+using MySQL.Forms.AdminMenu.FormsAdminMenu;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,7 +40,7 @@ namespace MySQL
             mainForm.Show();
             login = null;
             role = null;
-            Hide();
+            Close();
         }
 
         private void btnListUsers_Click(object sender, EventArgs e)
@@ -59,6 +61,20 @@ namespace MySQL
         {
             WarehouseManagement warehouseManagement = new WarehouseManagement(this);
             warehouseManagement.Show();
+            Hide();
+        }
+
+        private void btnViewAssortiment_Click(object sender, EventArgs e)
+        {
+            ViewAssortiment viewAssortiment = new ViewAssortiment(this);
+            viewAssortiment.Show();
+            Hide();
+        }
+
+        private void btnSales_Click(object sender, EventArgs e)
+        {
+            ViewSales viewSales = new ViewSales(this);
+            viewSales.Show();
             Hide();
         }
     }

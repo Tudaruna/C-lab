@@ -5,6 +5,7 @@ using static MySQL.MainForm;
 using System.Windows.Forms;
 using System.Runtime.Serialization;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 
 namespace MySQL.Classes
 {
@@ -21,6 +22,10 @@ namespace MySQL.Classes
         static public DataTable dtCustomers = new DataTable();
         static public DataTable dtWhProductsCount = new DataTable();
         static public DataTable dtDetailsProduct = new DataTable();
+        static public DataTable dtWriteOff = new DataTable();
+        static public DataTable dtAssortiment = new DataTable();
+        static public DataTable dtSalesForAdmin = new DataTable();
+        static public DataTable dtOrders = new DataTable();
         static public MySqlDataReader msDataReader = null;
 
 
@@ -244,5 +249,92 @@ namespace MySQL.Classes
                     res.Add(cell.ToString());
             return res;
         }
+
+
+        // Списание просроченных товаров
+        static public int WriteOff()
+        {
+            msCommand.CommandText = $"SELECT store.PositionID, store.Product, store.Count, store.Date, assortiment.Shelflife " +
+                                    $"FROM store " +
+                                    $"INNER JOIN assortiment USING(Product) " +
+                                    $"WHERE To_DAYS(CURDATE())-TO_DAYS(store.Date) >= assortiment.Shelflife;";
+
+            dtWriteOff.Clear();
+            msDataAdapter.SelectCommand = msCommand;
+            msDataAdapter.Fill(dtWriteOff);
+
+            foreach(DataRow row in dtWriteOff.Rows)
+            {
+                DateTime date = new DateTime();
+                date = (DateTime)row[3];
+
+                msCommand.CommandText = $"INSERT INTO write_off (Product, Count, Date, DateOff)" +
+                                        $"VALUES ('{row[1]}', '{row[2]}', '{date.ToString("yyyy-MM-dd")}', '{DateTime.Today.ToString("yyyy-MM-dd")}');";
+                msCommand.ExecuteNonQuery();
+                MessageBox.Show("ntcn");
+                msCommand.CommandText = $"DELETE FROM store WHERE PositionID = {row[0]};";
+                msCommand.ExecuteNonQuery();
+            }
+            return dtWriteOff.Rows.Count;
+        }
+
+
+        // Получить ассортимент
+        static public void GetAssrotiment()
+        {
+            msCommand.CommandText = $"SELECT * FROM assortiment;";
+
+            msDataAdapter.SelectCommand = msCommand;
+            dtAssortiment.Clear();
+            msDataAdapter.Fill(dtAssortiment);
+        }
+
+
+        // Получить все продажи
+        static public void GetSalesForAdmin()
+        {
+            msCommand.CommandText = $"SELECT sales.Customer, sales.Date, assortiment.Name, positionsinsale.Count " +
+                                    $"FROM sales " +
+                                    $"INNER JOIN positionsinsale ON positionsinsale.Sale = sales.SaleID " +
+                                    $"INNER JOIN store ON positionsinsale.Product = store.PositionID " +
+                                    $"INNER JOIN assortiment ON store.Product = assortiment.Product;";
+            msDataAdapter.SelectCommand = msCommand;
+            dtSalesForAdmin.Clear();
+            msDataAdapter.Fill(dtSalesForAdmin);
+        }
+
+
+        // Получение заказов определенного пользователя
+        static public void GetOrders()
+        {
+            msCommand.CommandText = $"SELECT sales.Date, assortiment.Name, positionsinsale.Count " +
+                                    $"FROM sales " +
+                                    $"INNER JOIN positionsinsale ON positionsinsale.Sale = sales.SaleID " +
+                                    $"INNER JOIN store ON positionsinsale.Product = store.PositionID " +
+                                    $"INNER JOIN assortiment ON store.Product = assortiment.Product " +
+                                    $"WHERE sales.Customer = '{User}';";
+            msDataAdapter.SelectCommand = msCommand;
+            dtOrders.Clear();
+            msDataAdapter.Fill(dtOrders);
+        }
+
+        
+        // Оформить заказ
+        static public void CheckOut(string product, int count)
+        {
+            msCommand.CommandText = $"INSERT INTO sales (Customer, Date) " +
+                                    $"VALUES ('{User}', '{DateTime.Now.ToString("yyyy-MM-dd")}')";
+            msCommand.ExecuteNonQuery();
+
+            msCommand.CommandText = $"SELECT MAX(SaleID) FROM sales";
+            object res = msCommand.ExecuteScalar();
+            int indSale = Int32.Parse(res.ToString());
+
+            msCommand.CommandText = $"INSERT INTO positionsinsale " +
+                                    $"VALUES ('{indSale}', '{product}', '{count}');";
+            msCommand.ExecuteNonQuery();
+        }
+
+        // Добавить функцию которая выбирает продукты для comboBox в форме ViewOrders из таблицы store в БД
     }
 }
